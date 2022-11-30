@@ -17,7 +17,7 @@ public class TitlePanel extends JPanel implements ActionListener {
     // Components
     private final JLabel descLabel = new JLabel("Unnamed Dungeon Crawler");
     private final JButton startButton = new JButton("Start Game");
-    private final JButton leaderboardButton = new JButton("Leaderboard");
+    //private final JButton leaderboardButton = new JButton("Leaderboard");
     private final JButton exitButton = new JButton("Exit Game");
     
     // Constructor
@@ -35,10 +35,11 @@ public class TitlePanel extends JPanel implements ActionListener {
         startButton.setBackground(Color.RED);
         startButton.setForeground(Color.WHITE);
         
+        /**
         leaderboardButton.setFont(new Font("Verdana", Font.BOLD, 20));
         leaderboardButton.setBackground(Color.RED);
         leaderboardButton.setForeground(Color.WHITE);
-        
+        */
         exitButton.setFont(new Font("Verdana", Font.BOLD, 20));
         exitButton.setBackground(Color.RED);
         exitButton.setForeground(Color.WHITE);
@@ -73,7 +74,7 @@ public class TitlePanel extends JPanel implements ActionListener {
         gbc.gridheight = 2;
         gbc.gridwidth = 3;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        this.add(leaderboardButton, gbc);
+        //this.add(leaderboardButton, gbc);
         
         gbc.gridx = 2;
         gbc.gridy = 10;
@@ -86,7 +87,7 @@ public class TitlePanel extends JPanel implements ActionListener {
     // Adds ActionListener to Buttons
     private void addActionEvents() {
         startButton.addActionListener(this);
-        leaderboardButton.addActionListener(this);
+        //leaderboardButton.addActionListener(this);
         exitButton.addActionListener(this);
     }
 
@@ -98,9 +99,12 @@ public class TitlePanel extends JPanel implements ActionListener {
             parentFrame.openCharacterSelect();
         }
         // Moves to LeaderboardPanel
+        /**
         else if (e.getSource() == leaderboardButton) {
             parentFrame.openLeaderboard();
         }
+        */
+        
         // Exits Program
         else if (e.getSource() == exitButton) {
             parentFrame.exitGame();
